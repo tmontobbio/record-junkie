@@ -11,3 +11,9 @@ namespace :assets do
     puts "Not pre-compiling assets..."
   end
 end
+
+namespace :assets do
+  task "clean" do
+    puts "Not pre-cleaning assets..."
+  end
+end
