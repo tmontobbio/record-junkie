@@ -13,6 +13,8 @@ require "action_view/railtie"
 require "action_cable/engine"
 Bundler.require(*Rails.groups)
 
+
+
 module RecordJunkie
   class Application < Rails::Application
     config.load_defaults 7.0
@@ -20,5 +22,6 @@ module RecordJunkie
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
     config.action_dispatch.cookies_same_site_protection = :strict
+    config.secret_key_base = "somesecretkey"
   end
 end
